@@ -22,4 +22,7 @@ The directory can also be changed by setting the cache variable FETCH_VCPKG_DIR.
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(FetchVcpkg)
 fetch_vcpkg(TAG 2023.11.20)
+
+# Top level call to project
+project(...)
 ```
