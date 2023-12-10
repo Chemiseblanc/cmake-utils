@@ -4,6 +4,10 @@ include_guard(GLOBAL)
 include(FetchContent)
 
 function(fetch_vcpkg)
+    if(PROJECT_NAME)
+        return()
+    endif()
+    
     set(current_toolchain_file "")
     if(CMAKE_TOOLCHAIN_FILE MATCHES "vcpkg.cmake")
         return()
